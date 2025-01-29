@@ -1,15 +1,15 @@
 package com.example.musicplayer.adapter
 
-import android.print.PrintAttributes.Margins
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.RoundedCorner
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.annotation.GlideModule
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.example.musicplayer.SongsListActivity
 import com.example.musicplayer.databinding.CategoryitemRvBinding
 import com.example.musicplayer.models.CategoryModels
 
@@ -30,7 +30,15 @@ class CategoryAdapter(
                         )
                 )
                 .into(binding.coverImageV)
-            Log.i("songs", category.songs.size.toString() )
+
+            //Start SongsList Activity
+            val context = binding.root.context
+            binding.root.setOnClickListener {
+                SongsListActivity.categories = category
+                context.startActivity(
+                    Intent(context,SongsListActivity::class.java)
+                )
+            }
         }
     }
 
