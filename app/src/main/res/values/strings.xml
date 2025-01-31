@@ -6,4 +6,6 @@
     <string name="song_subtitle">Song subtitle</string>
     <string name="song_cover_image">song_cover_image</string>
     <string name="singer_name">singer_name</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="album">Album</string>
 </resources>
