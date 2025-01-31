@@ -1,5 +1,6 @@
 package com.example.musicplayer.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,6 +8,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.example.musicplayer.MyExoPlayer
+import com.example.musicplayer.PlayerActivity
 import com.example.musicplayer.databinding.SongListItemRecyclerRowBinding
 import com.example.musicplayer.models.SongModel
 import com.google.firebase.firestore.FirebaseFirestore
@@ -32,8 +34,9 @@ class SongListAdapter(private val songIdList : List<String>) :
                                 )
                                 .into(binding.songCoverImageView)
                             binding.root.setOnClickListener{
-                                val exoPlayer = MyExoPlayer()
-                                exoPlayer.startPlaying(binding.root.context,song)
+
+                                MyExoPlayer.startPlaying(binding.root.context,song)
+                                it.context.startActivity(Intent(it.context, PlayerActivity::class.java))
                             }
                         }
                     }
