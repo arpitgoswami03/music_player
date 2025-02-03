@@ -8,4 +8,5 @@
     <string name="singer_name">singer_name</string>
     <string name="now_playing">Now Playing</string>
     <string name="album">Album</string>
+    <string name="trending">Trending</string>
 </resources>
