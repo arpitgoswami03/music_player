@@ -28,11 +28,12 @@
             android:textSize="24sp"
             android:gravity="center"/>
         <ImageView
+            android:id="@+id/option_btn"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:src="@drawable/baseline_dehaze_24"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true" />
     </RelativeLayout>
 
     <ImageView
@@ -99,6 +100,39 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/section_1_title"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"/>
+
+            <RelativeLayout
+                android:id="@+id/mostplayed_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/mostplayed_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trending"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/baseline_arrow_right_24"
+                    android:layout_alignParentEnd="true"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mostplayed_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mostplayed_title"/>
 
             </RelativeLayout>
 
