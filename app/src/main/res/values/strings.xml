@@ -9,4 +9,13 @@
     <string name="now_playing">Now Playing</string>
     <string name="album">Album</string>
     <string name="trending">Trending</string>
+    <string name="explore_latest_hits_only_on_music_stream">Explore latest hits only on Music Stream</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="create_account">Create Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="login">Login</string>
+    <string name="email_address">Email address</string>
+    <string name="logout">Logout</string>
 </resources>
